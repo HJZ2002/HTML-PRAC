@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact us</title>
+    <link rel = "stylesheet" href= "style.css"> 
+</head>
+<body>
+    <h1 class="text">Contact us form</h1> <!--Intro of document title-->
+
+    <div class="status">
+        <!--getting the mr mrs and ms -->
+        <form>
+            <input type="radio" id="mr" name="status" value="mr" checked>
+            <label for= "mr">Mr.</label>
+            
+            <input type="radio" id="mrs" name="status" value="mrs" checked>
+            <label for= "mrs">Mrs.</label>
+
+            <input type="radio" id="ms" name="status" value="ms" checked>
+            <label for= "ms">Ms.</label>
+        </form>
+    </div>
+    <!--Setting up the information for the requested form-->
+    <div class="center">
+        <form class="mainform">
+            <div class="left">
+                <label for = fname>First Name</label><br>
+                <label for = lname>Last Name</label><br>
+                <label for ="studentID">Upload Student ID</label><br>
+                <label for ="E-Mail">E-Mail</label><br>
+                <label for ="mobile">Mobile</label><br>
+               
+            </div>
+            <div class="right">
+                <input type="text" id="fname" name="fname" placeholder="FirstName"><br>
+                <input type="text" id="lname" name="lname"placeholder = "LastName"><br>
+                <input type="file" id="studentID" name="studentID"><br>
+                <input type="text" id="E-Mail" name="E-Mail" required><br>
+                <input type="tel" id="mobile" name="mobile"placeholder="+63"><br>
+
+                
+            
+                
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+             </div>
+        </form>
+    </div>
+</body>
+</html>

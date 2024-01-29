@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name = "viewport" content="width=device-width, initial-scale">
+    <link rel="icon" type="image/png" href="images for twitter/x-social-media-logo-icon.png">
+    <title>Twitter</title>
+    <link rel = "stylesheet" href= "Design.css"> 
+</head>
+<body>
+    <div class="top">
+        <form class="main">
+            <div class="left">
+                <label for="YourName"></label><br>
+                <label for="LastName"></label><br>
+                <label for="YourAddress"></label><br>
+                <label for="YourPhone"></label><br>
+                <label for="Occupation"></label><br>
+                <label for= "Birthdate" style="margin-top: 35px;"></label><br>
+                <label for ="School level"></label><br>
+    </div>
+    <!--My main class for the food stall-->
+    <div class = "Main">
+        <h1><b>Welcome to food Stall </b></h1>
+        <br>
+        <!--Registration method-->
+        <h3>Kindly Register if u want to reserve :D</h3>
+        <!--Filling up for registration-->
+        <div class="Register">
+        <form>
+            <!--input for the registration-->
+            <h2>Fill up your Name</h2>
+            <!--Firstname-->
+            <h4>FirstName</h4>
+            <input type="text" id="YourName" name="YourName" placeholder="YourName" required><br>
+            <!--LastName-->
+            <h4>LastName</h4>
+            <input type="text" id="LastName" name="LastName"placeholder="LastName"required><br>
+            <!--Address-->
+            <h4>Address</h4>
+            <input type="text" id="YourAddress"name="YourAddress"placeholder="YourAddress"required><br>
+            <!--Phone Number-->
+            <h4>PhoneNumber</h4>
+            <input type="tel" id="YourPhone" name="YourPhone" placeholder="+63"required><br>
+            <!--Occupation-->
+            <h4>Occupation</h4>
+            <input type="text"id="Occupation" name="Occupation" placeholder="Occupation"required><br>
+            <!--Birthdate-->
+            <h4>Birthday</h4>
+            <input type="datetime-local" id="Birthdate" name="birthdate"placeholder="Birthdate"required><br>
+            <!--Education Level-->
+            <h4>School Level</h4>
+            <input type="radio"id="YourSchooLevel" name="YourSchooLevel" required="YourSchooLevel"><br>
+            <label for="YourSchooLevel">College</label>
+            <input type="radio"id="YourSchooLevel" name="YourSchooLevel" required="YourSchooLevel"><br>
+            <label for="YourSchooLevel">Senior High</label>
+            <input type="radio"id="YourSchooLevel" name="YourSchooLevel" required="YourSchooLevel"><br>
+            <label for="YourSchooLevel">High School</label>
+
+             <!--Setting up for the payment inital or partial-->
+            <h3><b>How are u going to pay ?</b></h3>
+            <input type="checkbox" id="ProofOfPayment" name="ProofOfPayment" required = "Proof of payment"><br>
+            <label for="ProofOfPayment">Full Payment</label>
+            <input type="checkbox" id="initalpayment" name="initalpayment" required = "initalpayment"><br>
+            <label for="initalpayment">Inital Payment</label>
+            <!--Setting up for the buttons for the payment -->
+            <div class="Register">
+                <form>
+                    <label for="payment">How much on Initial?</label>
+                    <div class="payment-section">
+                        <label for="initialPayment">Amount pay for the initial:</label>
+                        <input type="text" id="initialPayment" name="initialPayment" placeholder="Enter initial payment amount">
+                    </div>
+                    <div class="payment-section">
+                        <input type="checkbox" id="terms" name="terms">
+                        <label for="terms">I agree to the terms and conditions of services</label>
+                    </div>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Cancel</button>
+                </form>
+            </div>
+</body>
+</html>

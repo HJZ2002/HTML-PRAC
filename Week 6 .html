@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in to X/X</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="icon" type="image/png" href="images for twitter/x-social-media-logo-icon.png">
+</head>
+<body>
+    <div class="container">
+        <div class="box to box">
+            <i class="fab fa-X"><img src="images for twitter/x-social-media-logo-icon.png"/></i>
+            <!--adding the buttons-->
+            <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2Fgsi%2Fselect%3Fclient_id%3D49625052041-kgt0hghf445lmcmhijv46b715m2mpbct.apps.googleusercontent.com%26ux_mode%3Dpopup%26ui_mode%3Dcard%26as%3DM5DpC%252B3AU9RhrxGXpfGeqQ%26channel_id%3D38f0a3a7330fcd67f1543e0f9e7f1ff560a48c40e4349436c46785830f45385d%26origin%3Dhttps%3A%2F%2Ftwitter.com&faa=1&ifkv=ASKXGp1aehXplkyvufa2dv96eNM2KeL-THIajXqg4-yjKYAmAcu-ASoJha-vKtLVurJRxPjrhZwr&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S755537584%3A1705849048049218&theme=glif" target="_blank">
+                <button>
+                    <img src="images for twitter/google.png" width="19">
+                    <!--setting up for the signing in-->
+                    <span>Sign in with Google</span>
+                </button>
+            </a>
+            <!--apple signing in-->
+            <a href="https://appleid.apple.com/auth/authorize?client_id=com.twitter.twitter.siwa&redirect_uri=https%3A%2F%2Ftwitter.com&response_type=code%20id_token&state=FB17w87uWCQhKqqFs95bj0JdTdA-aII3f7Ff7GWWWuW&scope=name%20email&response_mode=web_message&frame_id=7d93fff7-a76c-4e88-8326-47b2226ab335&m=11&v=1.5.5" target="_blank">
+                <button>
+                    <img src="images for twitter/apple.png" width="19">
+                    <span>Sign in with Apple</span>
+                </button>
+            </a>
+        </div>
+        <h5>Or<hr></h5>
+        <div class="box box-2nd">
+            <!--making up the second option for signing up if the user has no google or twitter-->
+            <form>
+                <input type="text" placeholder="Phone, email, or username"/>
+            </form>
+            <button class="next">Next</button>
+            <button class="forgot">Forgot password ?</button>
+        </div>
+        <p>Don't have an account? <a href="#">Sign Up</a></p>
+    </div>
+</body>
+</html>
