@@ -1,0 +1,50 @@
+body{
+    background-color: white;
+}
+h1{
+    color: blue;
+    position: relative;
+    top:10px;
+    left:795px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: normal;
+    align-items: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -0.5%;
+    margin-bottom: 5px;
+}
+form.mainform{
+    display: flex;
+    justify-content: center;
+    width: 55%;
+}
+.left label {
+    display: inline-block;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+.left, .right {
+    width: 30%;
+    margin-left: 30%;
+    margin-right: -43%;
+}
+.right label , .right input, .right textarea, .right checkbox, .right radio {
+    margin-bottom: 5px;
+}
+.right input[type = "email"] {
+    width: 220px;
+}
+.right textarea {
+    width: 220px;
+    height: 70px;
+}
