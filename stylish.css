@@ -1,53 +1,67 @@
-*{
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Delius+Swash+Caps&family=Fenix&family=Great+Vibes&family=Koh+Santepheap:wght@100;300;400;700;900&family=Modern+Antiqua&family=Roboto+Slab:wght@100..900&family=Ysabeau+SC:wght@1..1000&display=swap');
+
+
+/* Contact form styling */
+body {
+    background-color: #b2b2b2; 
 }
-header{
-    height: 100px;
-    background: rgba(0,0,0,0.7);
-    width: 100%;
-    position: fixed;
-    z-index: 12;
+form {
+    background: rgba(255, 255, 255, 0.9); /* Adjusted transparency for better readability */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for better contrast */
+    max-width: 600px;
+    margin: 40px auto; /* Increased top and bottom margin for better spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the form items horizontally */
 }
-.logo{
-    font-family: 'Aclonica';
-    font-size: 25px;
-    padding: 50px;
-    margin-left: 50px;
+
+h1.contact-header {
+    text-align: center; /* Centers the text horizontally */
+    width: 100%; /* Ensures it spans the full width */
+    margin-top: 0; /* Adjust as needed for spacing above the header */
+    margin-bottom: 1em; 
 }
-.logo a {
-    color:#fff;
-    text-decoration: none;
-}
-.nav_bar {
-    font-family: 'Poppins';
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left; /* Aligns the label text to the left */
+    width: 100%; /* Ensures labels span the full width of the form */
     font-size: 20px;
-    position: fixed;  
-    top: 0; 
-    right: 0;
-    list-style: none;
- }
-.nav_bar li{
-    display: inline-block;
-}
-.nav_bar li a {
-    padding: 15px;
-}
-.nav_bar li a:hover{
-    background: #959191;
-    color: #fff;
-    border: 1px solid #000;
-    border-radius: 5px;
-    border-width: auto;
     
 }
-.carousel-item img{
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: auto;
-    height: 100vh;
-    filter: brightness(50%);
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+
+form textarea {
+    width: calc(100% - 20px); /* Adjusts width to account for padding */
+    padding: 10px;
+    margin: 20px 39px; /* Reduced top and bottom margin, increased left and right */
+    border: 1px solid #4a90e2;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect the overall width */
+    min-height: 45px;
+    font-size: 23px;
     
+}
+
+form button[type="submit"] {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto; /* Allows the button to size according to its content */
+    align-self: center; /* Aligns the button to the center of the form */
+}
+
+form button[type="submit"]:hover {
+    background-color: #d35400;
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylish.css">
+    <title>Contact-us</title>
+    <script defer src="contact.js"></script>
+</head>
+<!-- Start of the class -->
+<body>
+    <!--my main source for h2-->
+    <div class="container">
+        <h2>Contact us so that we may be able to assist u </h2>
+    </div>
+    <!--form for the contact info-->
+    <form action="/submit-contact-info" method="post">
+        <div>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div>
+            <label for="reason">Reason:</label>
+            <textarea id="reason" name="reason" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <!--end-->
+</body>
+</html>

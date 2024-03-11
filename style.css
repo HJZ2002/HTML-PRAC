@@ -1,50 +1,1162 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Delius+Swash+Caps&family=Great+Vibes&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Delius+Swash+Caps&family=Great+Vibes&family=Modern+Antiqua&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Delius+Swash+Caps&family=Great+Vibes&family=Modern+Antiqua&family=Roboto+Slab:wght@100..900&family=Ysabeau+SC:wght@1..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Dancing+Script:wght@400..700&family=Delius+Swash+Caps&family=Fenix&family=Great+Vibes&family=Koh+Santepheap:wght@100;300;400;700;900&family=Modern+Antiqua&family=Roboto+Slab:wght@100..900&family=Ysabeau+SC:wght@1..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Assistant:wght@200..800&family=Dancing+Script:wght@400..700&family=Delius+Swash+Caps&family=Fenix&family=Great+Vibes&family=Koh+Santepheap:wght@100;300;400;700;900&family=Modern+Antiqua&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Ysabeau+SC:wght@1..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Assistant:wght@200..800&family=Dancing+Script:wght@400..700&family=Delius+Swash+Caps&family=Fenix&family=Great+Vibes&family=Koh+Santepheap:wght@100;300;400;700;900&family=M+PLUS+Rounded+1c&family=Modern+Antiqua&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Ysabeau+SC:wght@1..1000&display=swap');
+*{
+    font-family: 'Oswald',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 1s linear;
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('retrowave.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(0.73); /* adjust as needed*/
+    z-index: -1; 
+}
+
 body{
-    background-color: white;
+    min-height: 100vh;
 }
-h1{
-    color: blue;
-    position: relative;
-    top:10px;
-    left:795px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+.nav-bar {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Align items vertically */
+    width: 100%; 
+    padding: 20px 0; 
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    animation: slideRight 1s ease-out forwards;
+    
+}
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.nav-container ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: -17%;
+}
+
+.nav-container ul li {
+    margin: 0 15px;
+}
+
+.nav-container ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 0.5px;
     font-weight: bold;
-    font-size: normal;
+    font-family: "Ysabeau SC", sans-serif;
+}
+
+.nav-search {
+    display: flex;
     align-items: center;
 }
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.nav-search-box {
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+    
 }
-.status {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: -0.5%;
-    margin-bottom: 5px;
+
+.nav-search-box:focus {
+    border-color: deepskyblue;
+    opacity: 1;
 }
-form.mainform{
-    display: flex;
-    justify-content: center;
-    width: 55%;
+
+.search-icon {
+    color: darksalmon;
+    margin-left: 10px;
+    cursor: pointer;
 }
-.left label {
+@media (max-width: 768px) {
+    .nav-container ul {
+        justify-content: center; 
+       
+    }
+
+    .nav-search {
+        display: none; /* Hides the search box and icon on mobile */
+    }
+}
+
+footer {
+    margin-top: auto; 
+}
+
+main {
+    flex: 1;
+}
+
+h1{
+    margin-top: 10px;
+    margin-left: 20px;
+    text-align: center;
+    color: white;
+    font-weight: 700,bold;
+    text-shadow: 2px 2px 2px #000000;
+    animation: fadeInDown 1s ease-out forwards;
+    font-size: 52px; 
+    font-family: "Ysabeau SC", sans-serif;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.description-container {
+    display: flex; 
+    align-items: center; 
+    position: absolute;
+    top: 650px;
+    left: 330px;
+    overflow: hidden;
+}
+.description {
+    position: absolute;
+    top: 190px;
+    left: 270px;
+    width: 350px; 
+    font-size: 50px; 
+    color: white;
+    padding: 20px; 
+    line-height: 1.6; /* Increased line-height*/
+    font-family: 'Great Vibes', serif;
+    margin: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    animation: fadeInUp 1.0s ease-out forwards; /* Apply fadeInUp animation */
+    font-family: "Arimo",cursive;
+}
+@media (max-width: 768px) {
+    .description {
+        display: none; /* Hides the description text on mobile screens */
+    }
+}
+
+@media (min-width: 769px) {
+    .description {
+        display: block; /* the description text is visible on screens */
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.learn-more-btn {
     display: inline-block;
-    margin-top: 2px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 30px;
+    color: #000000;
+    background-color: darkgray;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: slideDown 0.99s ease-in-out forwards; /* the slideDown animation */
+    z-index: 2 ;
+}
+
+.learn-more-btn:hover{
+    background-color: yellowgreen;
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.slide-btn {
+    cursor: pointer;
+    position: absolute;
+    z-index: 10; /* Ensure it's above other elements */
+    width: 40px; 
+    height: 40px; 
+    padding: 0; 
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 50%; 
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+    border: 2px solid white; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* position of your slider a*/
+.prev, .next {
+    bottom: 25%; 
+    animation: pulse 1.5s infinite;
+}
+
+.prev {
+    left: 60%; /* Adjust based on your layout */
+}
+
+.next {
+    right: 30%; /* Adjust based on your layout */
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.contact-info{
+    position: absolute;
+    top: 0;
+    right: -8px;
+    padding: 10px;
+    color: white;
+    animation: fadeInSlideRight 1s ease-out forwards;
+    animation-delay: 0.0s;
+}
+/* for the fade animation */
+@keyframes fadeInSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
+.contact-info span {
+    display: block;
     margin-bottom: 5px;
 }
-.left, .right {
-    width: 30%;
-    margin-left: 30%;
-    margin-right: -43%;
+.contact-info span i {
+    margin-right: 7px;
 }
-.right label , .right input, .right textarea, .right checkbox, .right radio {
-    margin-bottom: 5px;
+.image-slider {
+    position: relative; 
+    width: 19%; 
+    height: auto;
+    white-space: nowrap;
+    font-size: 0;
+    line-height: 0; 
+    bottom: -150px; 
+    left: 55%;
+    transform: translateX(-50%);
+    animation: fadeIn 1s ease-out forwards;
 }
-.right input[type = "email"] {
-    width: 220px;
+/* frame for fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
-.right textarea {
-    width: 220px;
-    height: 70px;
+.image-slider .slide{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+}
+/* animation thing for the slide show */
+@keyframes slideShow {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+.nav-search-box:focus {
+    border-color: deepskyblue; /* Highlights the focus */
+    opacity: 1 ;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+
+
+/* 768 px for the screen  */
+@media (max-width: 768px) {
+    .nav-container ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-container ul li {
+        margin: 10px 0; 
+    }
+
+    .description-container, .contact-info, .image-slider {
+        position: relative; 
+        top: auto;
+        left: auto;
+        transform: none;
+    }
+
+    .description {
+        font-size: 30px; /* Smaller font  */
+        width: auto; 
+        left: 10%; /* to ensure it fits well */
+        right: 10%; /* Ensure there's some padding on the right */
+        text-align: center; /* Center the text for a better look on smaller screens */
+    }
+    .learn-more-btn {
+        font-size: 20px; 
+    }
+
+    .image-slider {
+        bottom: 0; 
+        width: 100%; 
+    }
+
+    .about-us {
+        margin: 20px 0; 
+    }
+
+    /* Fix for navigation and search button separation */
+    .nav-container {
+        justify-content:flex-start; /* Center items when they wrap */
+        padding-left: 1.82in;
+        
+    }
+
+    .nav-search {
+        width: 100%; 
+        justify-content: center; /* Center search box */
+        margin-top: 10px; /* space between nav items and search box */
+    }
+
+   
+    .description {
+        color: #000; /* Changes text color for better visibility */
+        background-color: rgba(255, 255, 255, 0.7); 
+        border-radius: 5px; 
+        text-shadow: none; 
+    }
+    /* Fix for prev and next button positioning */
+    .prev, .next {
+       display: none;
+    }
+}
+
+/* for screens smaller than 480px */
+@media (max-width: 480px) {
+    .nav-container ul li a {
+        font-size: 20px; 
+    }
+
+    .description {
+        font-size: 16px; 
+        text-align: justify; 
+        padding: 10px; 
+    }
+
+    .prev, .next {
+        left: -50%; 
+        transform: translateX(-50%); 
+    }
+
+    img {
+        max-width: 100%; 
+        height: auto; 
+    }
+    .image-text {
+        font-size: 14px; 
+    }
+
+   
+    .description {
+        font-size: 14px; 
+    }
+
+    
+    .prev, .next {
+        width: 40px; 
+        height: 40px; 
+        font-size: 20px; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .resources {
+        margin: 20px 0;
+    }
+
+    .resources p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .resources p {
+        font-size: 16px; /* Further adjust font size for very small screens */
+    }
+}
+.our-gallery {
+    text-align: center; 
+    padding: -10px; 
+    background-color:bisque; 
+    border-radius: 10px; 
+    margin: -19px auto;/* for the adjusting of the our gallery */ 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: -555px;
+    animation: fadeIn 1s ease-out forwards;
+}
+.our-gallery{
+    margin-top: -18px;
+}
+.previous-section { 
+    margin-bottom: 100px; 
+}
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust based on your layout needs */
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+    align-items: center;
+    
+    
+}
+/* Decrease the size of the gallery images to fit the new elements */
+.gallery-container img {
+    border-radius: 50%;
+    width: 120px; /* Decreased from 150px */
+    height: 120px; /* Decreased from 150px */
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin-bottom: 10px; /* Adjusted spacing */
+   
+}
+
+
+/* Add a media query for smaller screens to adjust the layout */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+    }
+}
+
+/* Add a media query for even smaller screens to adjust the layout */
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr; /* One column for very small screens */
+    }
+}
+
+
+.payment-info {
+    display: flex;
+    justify-content: center; /* Align items to the start (left) */
+    margin-top: 10px;
+    width: 100%; 
+    margin-left: -330px;
+    margin-bottom: -50px;
+    font-size: 20px;
+}
+
+.payment-info input {
+    padding: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    margin-top: -6px;
+}
+
+.action-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; /* Center the buttons */
+}
+
+.btn {
+    padding: 5px 15px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.add {
+    background-color: green;/* color for the btn*/
+    font-size: 18px;
+}
+
+.cancel {
+    background-color: red;/* color for the btn*/
+}
+
+.total-price {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: -20px;
+    /* Add a left margin to move it a bit to the right */
+    margin-left: 650px; /* Adjust this value as needed */
+    font-size: 20px;
+    font-weight: bold;
+}
+/* about us style*/
+.about-us {
+    text-align: center;
+    padding: 20px;
+    margin: -18px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 499px;
+    font-size: 26px;
+}
+
+
+.about-us h2 {
+    color: #333;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.about-us p {
+    color: #666;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+/* Resources Section Styles */
+.resources{
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 499px;
+    font-size: 26px;
+    max-width: 1200vh;
+}
+.resources{
+    margin-top: 20px;
+}
+
+.resources h2 {
+    color: #333;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.resources p {
+    color: #666;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .about-us, .resources {
+        margin: 20px 10px;
+    }
+}
+.about-us, .resources {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between text and image */
+    padding: 20px; /* Adjust padding as needed if not satisfied */
+    animation: fadeIn 1s ease-out forwards; /* Apply the animation */
+}
+
+.about-us img, .resources img {
+    width: 50%; /* Adjust image width as needed */
+    height: auto; 
+    margin-left: 20px; /* Space between text and image */
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.about-us-content, .resources-content {
+    width: 45%; /* Adjust text width as needed */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-us, .resources {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center; /* Center-align text */
+        animation: fadeIn 1s
+    }
+
+    .about-us img, .resources img {
+        width: 80%; /* Adjust image width for smaller screens */
+        margin: 20px 0; /* Add margin above and below the image */
+    }
+
+    .about-us-content, .resources-content {
+        width: 100%; /* Full width for text */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us p, .resources p {
+        font-size: 16px;
+    }
+    body {
+        flex-direction: column;
+        justify-content: flex-start; 
+    }
+
+    .nav-bar, .nav-container {
+        flex-direction: column; /* Stack nav items vertically */
+    }
+
+    .nav-container ul {
+        margin-right: 0; /* Reset the right margin */
+    }
+
+    .nav-container ul li a {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+
+    .description {
+        font-size: 16px; /* font size for readability */
+        padding: 10px; /* Reduce padding for mobile */
+        margin: 10px; /* Adjust margin to fit smaller screens */
+        text-align: justify; /* Improve for readability */
+    }
+
+    .learn-more-btn, .slide-btn, .btn {
+        font-size: 16px; /* Reduce font size for the buttons */
+    }
+
+    .image-slider, .gallery-container, .payment-info, .total-price, .about-us, .resources {
+        width: 100%; 
+        margin-left: 0; 
+        padding: 10px; 
+        text-align: center; /* Center-align text */
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to two columns for gallery */
+    }
+
+    .payment-info, .action-buttons, .total-price {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .about-us p, .resources p {
+        font-size: 14px; /* Further reduce font size for these sections */
+    }
+}
+@media (max-width: 480px) {
+    /* Improve navigation menu interaction */
+    .nav-search-box {
+        width: 100%; /* Make the search box full width */
+        margin: 10px 0; /* Add some margin for spacing */
+    }
+
+    .search-icon {
+        font-size: 24px; /* Increase size for better touch interaction */
+    }
+
+    /* Adjust heading sizes for better readability */
+    h1, .resources h2, .about-us h2 {
+        font-size: 24px; /* Reduce the size of headings */
+        margin: 10px 0; /* Adjust margins to reduce space */
+    }
+
+    
+    footer {
+        padding: 20px 10px; 
+        font-size: 14px; 
+        text-align: center; 
+    }
+
+    /* Adjust the layout of contact information for better visibility */
+    .contact-info {
+        position: fixed; 
+        top: 10px; 
+        right: 10px; 
+        font-size: 14px; /* Reduce font size for contact info */
+        padding: 15px; /* Increase padding for better readability */
+        background-color: rgba(0, 0, 0, 0.7); /
+    }
+
+    /* Ensure buttons are easily clickable */
+    .btn, .learn-more-btn, .slide-btn {
+        padding: 10px 20px; /* Increase padding for a larger touch area */
+        margin: 5px 0; /* Add some space between the buttons */
+    }
+
+    /* Adjust the gallery for a single column layout */
+    .gallery-container {
+        grid-template-columns: 1fr; /* Use a single column for images */
+    }
+
+    /* Make sure all text content is readable */
+    p, li, a { /* Target all text elements */
+        font-size: 16px; /* Increase font size for readability */
+        line-height: 1.5; 
+    }
+
+    /* Adjust form elements for easier interaction */
+    input, select, textarea {
+        font-size: 16px; 
+        padding: 10px; /* Increase padding for a larger touch area */
+        margin: 5px 0; /* Add some space between elements */
+    }
+
+    
+    .payment-info, .action-buttons {
+        justify-content: center; /* Distribute space evenly */
+        margin-right:20px ;
+        right: 20px;
+    }
+
+    /* Adjust total price section for better visibility */
+    .total-price {
+        justify-content: center; /* Center the content */
+        font-size: 18px; /* Increase font size for visibility */
+        
+    }
+}
+@media (max-width: 480px) {
+    
+    .slide-btn {
+        width: 50px; /* Increase width for a larger touch area */
+        height: 50px; /* Increase height for a larger touch area */
+        font-size: 22px; /* Increase font size for better visibility */
+    }
+
+    
+    .modal, .popup {
+        width: 90%; 
+        margin: 10px auto; 
+        padding: 20px; 
+        font-size: 16px; 
+    }
+
+    
+    .form-control {
+        width: 100%; /* Ensure form controls use full width */
+        padding: 12px; /* Increase padding for a larger touch area */
+        margin-bottom: 20px; /* Add more space between form elements */
+    }
+
+    /* Improve visibility of inline elements like links within text */
+    a {
+        color: deepskyblue; /* Make links stand out more */
+        padding: 2px; /* Add padding to increase touch area */
+        margin: -2px; /* Offset for added padding to maintain layout */
+    }
+
+    /* Adjust spacing and layout of list items for clarity */
+    ul, ol {
+        padding-left: 20px; /* Increase padding for better readability */
+    }
+    li {
+        margin-bottom: 10px; /* Add space between list items */
+    }
+
+    /* Refine table displays for mobile viewing */
+    table {
+        width: 100%; /* Ensure tables use full width */
+        overflow-x: auto; /* Enable horizontal scrolling for wide tables */
+    }
+    th, td {
+        padding: 8px; /* Adjust padding for better readability */
+        text-align: left; /* Align text to the left for consistency */
+    }
+
+    /* Enhance readability and interaction of navigation elements */
+    .nav-bar, .nav-container {
+        flex-wrap: wrap; /* Allow nav items to wrap if needed */
+    }
+    .nav-item {
+        padding: 10px; /* Increase padding for a larger touch area */
+    }
+
+    /* Adjust the footer to be more mobile-friendly */
+    footer {
+        padding: 15px; /* Increase padding for better readability */
+        font-size: 14px; /* Adjust font size for mobile screens */
+    }
+
+    /* Ensure all buttons are easily interactable */
+    button, .btn {
+        min-width: 120px; /* Ensure buttons have a minimum width */
+        padding: 10px 15px; /* Increase padding for a larger touch area */
+    }
+}
+@media (max-width: 480px) {
+    /* Optimize images for mobile devices */
+    img {
+        max-width: 100%; /* Ensure images are not wider than the screen */
+        height: auto; 
+    }
+
+    /* Ensure video and iframe elements are responsive */
+    video, iframe {
+        width: 100%; 
+        height: auto; /* Adjust height automatically */
+    }
+
+    /* Improve form layout and visibility */
+    .form-group {
+        margin-bottom: 15px; /* Increase space between form groups */
+    }
+    label {
+        display: block; /* Ensure labels are above inputs */
+        margin-bottom: 5px; /* Space between label and input */
+    }
+
+    /* Adjust card elements for better mobile presentation */
+    .card {
+        margin-bottom: 20px; /* Space between cards */
+    }
+    .card-body {
+        padding: 15px; /* Padding inside cards */
+    }
+
+    /* Responsive table adjustments */
+    .table-responsive {
+        overflow-x: scroll; /* Enable horizontal scrolling on tables */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Simplify header and navigation styles */
+    header {
+        padding: 15px 5px; /* Adjust header padding */
+    }
+    .navbar-toggle {
+        display: block; /* Show toggle button for mobile nav */
+    }
+    .navbar-collapse {
+        max-height: 340px; /* Limit height of expanded menus */
+        overflow-y: auto; /* Enable scrolling within the menus */
+    }
+
+    /* Adjust typography for better readability */
+    h2, h3, h4, h5, h6 {
+        margin-top: 20px; /* Space above headings */
+        margin-bottom: 10px; /* Space below headings */
+    }
+    p, .text {
+        font-size: 16px; /* Increase base font size */
+        line-height: 1.5; /* Improve line height for readability */
+    }
+
+    
+    .button, a.button {
+        padding: 12px 20px; /* Larger touch area */
+        font-size: 16px; /* Increase font size for readability */
+    }
+
+    /* Adjust spacing and alignment for various elements */
+    .margin-top {
+        margin-top: 20px; /* Add top margin where needed */
+    }
+    .text-center {
+        text-align: center; /* Center-align text */
+    }
+
+    /* Improve accessibility and visibility of interactive elements */
+    .accessibility-icon {
+        width: 48px; /* Increase size for visibility */
+        height: 48px; /* Maintain aspect ratio */
+    }
+
+    /* Footer adjustments for mobile */
+    .footer {
+        padding: 20px 10px; /* Adjust padding */
+        text-align: center; /* Center-align footer content */
+    }
+}
+@media (max-width: 480px) {
+    /* Adjust the main navigation to be more mobile-friendly */
+    .nav-bar {
+        padding: 10px; /* Reduce padding for more screen space */
+    }
+    .nav-item {
+        padding: 10px 5px; /* Adjust nav items for easier tapping */
+    }
+
+    /* Make sure all clickable elements have a larger touch area */
+    .clickable-icon, .social-media-icon {
+        padding: 15px; /* Increase padding for a larger touch area */
+        margin: -15px; /* Offset the increased padding to maintain layout */
+    }
+
+    /* Optimize spacing and layout for sections and containers */
+    .section, .container {
+        padding: 15px; /* Adjust padding for consistency */
+        margin-bottom: 20px; /* Ensure sections are well separated */
+    }
+
+    /* Enhance the readability of text in smaller containers */
+    .small-container {
+        padding: 15px; /* Increase padding for better text display */
+    }
+
+    /* Adjust the layout of lists to be more compact */
+    .list-item {
+        padding: 10px 0; /* Reduce vertical padding */
+    }
+
+    /* Improve form interaction */
+    .form-input, .form-select, .form-textarea {
+        font-size: 16px; /* Increase font size for readability */
+        padding: 12px; /* Increase padding for easier interaction */
+        margin: 8px 0; /* Adjust margin for better spacing */
+    }
+
+    /* Ensure that all buttons are easily interactable */
+    .button, .btn-primary, .btn-secondary {
+        padding: 12px 24px; /* Increase padding for a larger touch area */
+        font-size: 16px; /* Increase font size for visibility */
+        margin: 10px 0; /* Add margin for separation */
+    }
+
+    /* Adjust the display of inline-block elements for better alignment */
+    .inline-block {
+        display: block; 
+        margin-bottom: 10px; /* Add spacing between elements */
+    }
+
+    /* Optimize the display of tables on mobile */
+    .table {
+        display: block; /* Allow table to scroll horizontally */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; 
+    }
+
+    /* Enhance accessibility features */
+    .skip-link {
+        position: absolute;
+        top: 5px; 
+        left: 5px;
+        padding: 8px;
+        background: #000;
+        color: #fff;
+        z-index: 1000; /* Ensure it's above */
+    }
+
+    /* Footer adjustments */
+    .footer-links, .footer-info {
+        text-align: center; /* Center-align footer  */
+        margin: 15px 0; 
+    }
+}
+@media (max-width: 768px) {
+    .contact-info {
+        position:absolute;
+        top: 10px; 
+        right: -380px;
+        background-color: rgba(0, 0, 0, 0.8); 
+        padding: 10px; /* Increases padding for better touch interaction */
+        border-radius: 5px; /* Add rounded corners for a smoother look */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.5); /* Add a subtle shadow for depth */
+        z-index: 100;
+        font-size: 16px; /* Increase font size for better readability */
+        color: #fff; /* Ensure text is white for contrast */
+        display: flex; 
+        align-items: center; /* Center items vertically */
+        justify-content: center; 
+    }
+    .contact-info span {
+        margin: 0 5px; /* Add some space around icons and text */
+    }
+    .contact-info i {
+        margin-right: -5px; /* Space out icons from the text */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info {
+        font-size: 14px;
+        padding: 8px; 
+        top: 5px; /* Adjust top position */
+        right: 5px; /* Adjust right position */
+    }
+}
+
+.resources, .our-gallery {
+    width: calc(100% + 40px); 
+    margin-left: -20px; /* Adjust the left margin */
+    margin-right: -20px; /* Adjust the right margin  */
+}
+body {
+    overflow-x: auto; 
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Keeps horizontal scrolling hidden on mobile devices */
+    }
+}
+@media (max-width: 768px) {
+    .action-buttons {
+        justify-content:flex-end; /* Move the order and cancel buttons to the right */
+        padding-right: 0.99in;
+    }
+}
+@media (max-width: 768px) {
+    .payment-info {
+        justify-content: flex-end; /* Align to the right */
+        margin-right: -1in; 
+        
+    }
+
+    .payment-info input {
+        margin-right: -0.70in; /* Adjust input field position */
+        
+        
+    }
+    @media (max-width: 768px) {
+        .about-us {
+            width: calc(100% + 40px); 
+            padding: 15px; 
+            margin-left: -20px; 
+            margin-right: -20px; 
+        }
+    }
+}
+@media (max-width: 768px) {
+    .total-price {
+        justify-content: center; /* Align to the left */
+        margin-left: 30px; /* Adjust this value as needed for spacing */
+        padding-left: -0.50in;
+        padding-top: 0.80in;
+    }
+}
+.chicken-logo {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the area without losing its aspect ratio */
+    position: absolute; /* Positions the logo absolutely within its relative parent */
+    top: 20px; 
+    left: 50px; 
+    z-index: 2; /* Ensuress the logo is above other elements */
+    animation: fadeInLogo 1s ease-out forwards;
+}
+@keyframes fadeInLogo {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Start from slightly above */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 768px) {
+    .chicken-logo {
+        display: none;
+    }
 }

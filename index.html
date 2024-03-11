@@ -1,24 +1,140 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAPPY VALENTINES DAY EVERYONE</title>
-    <link rel="stylesheet" href="style2.css">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Antonio Fried Chicken Page</title>
+    <link rel = "stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script defer src="test.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="valentines">
-            <div class="envelope"></div>
-            <div class="front"></div>
-            <div class="card">
-                <div class="text">Happy</br> Valentine's</br> Day!</div>
-                <div class="heart"></div>
+    <main>
+    <!--Start-->
+    <div class="loader"></div>
+    <header class="header">
+        <a href="#"class="logo"> <i class="chicken">
+        <img src="logo for the chicken.jpg" alt="Chicken Logo" class="chicken-logo">
+        <!--Starting of the class-->
+        <h1>ANTONIO FRIED CHICKEN</h1>
+        <div class="nav-bar"> 
+            <div class="nav-container">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About-us</a></li>
+                    <li><a href="contact.html">Contact-us</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+                <div class="nav-search">
+                    <input type="text" class="nav-search-box" placeholder="Search">
+                    <i class="fa fa-search search-icon"></i>
+                </div>
             </div>
         </div>
+        <button class="slide-btn prev" onclick="changeSlide(-1)"><i class="fa fa-arrow-left"></i></button>
+        <button class="slide-btn next" onclick="changeSlide(1)"><i class="fa fa-arrow-right"></i></button>
+        <p class="description">Delicious at every bite it gives and serve fresh daily to you</p>
+        <div class="image-slider">
+            <img class="slide" src="pngtree-real-shot-delicious-and-tempting-fried-chicken-hd-fried-chicken-gourmet-image_838697.jpg" alt="Slide 1">
+            <img class="slide" src="iStock-513120936.jpg" alt="Slide 2">
+            <img class="slide" src="friedchikcen3.jpg" alt="Slide 3">
+            <img class="slide" src="l-intro-1652817093.jpg" alt="Slide 4">
+        </div>
+    </header>
+    <div class="about-us">
+        <div class="about-us-content">
+            <h2>About Us</h2>
+            <p>At Antonio Fried Chicken, we make sure that freshness and quality meets to our customers we serve not just meals, we ensure that its cook fresh so that our customers keeps coming back for more. Our chicken, sourced from trusted local farm the process of this is we marinated at overnight so that when it cook the freshness and crispiness and juicyness is there</p>
+        </div>
+        <img src="Screenshot_9.png" alt="about-us">
     </div>
-    <div class="shadow"></div>
+    
+    <div class="resources">
+        <div class="resources-content">
+            <h2>Resources</h2>
+            <p>For the resources we ensure and as it stated that our products and our meal is serve to be fresh to our customers and they can always comeback for more if they want to eat at our place and we not only serve chicken but we also serve different variaties like takoyaki bottle of water and other stuff so that our customers can pick there own choice we assure that our food is always fresh</p>
+        </div>
+        <img src="takoyaki.jpg" alt="resources">
     </div>
-    <script src="script.js"></script>
+    <div class = "contact-info">
+        <span><i class="fa fa-phone"></i>Call + 0987654321</span>
+        <span><i class="fa fa-envelope"></i>antoniofriedchiken@gmail.com</span>
+    </div>
+    <div>
+        <!--Gallery setup-->
+        <section class="our-gallery">
+            <h2>Our Gallery</h2>
+            <div class="gallery-container">
+                <!-- Gallery Item 1 - One Piece Chicken -->
+                <div class="gallery-item" data-quantity="0" data-active="false" data-price="35" data-id="one-piece-chicken">
+                    <img src="friedchicken.jpg" class="gallery-image">
+                    <p>One Piece Chicken 35 pesos</p>
+                    <div class="quantity-display">0</div>
+                    <button class="increase">+</button>
+                    <button class="decrease">-</button>
+                    <p class="subtotal">subTotal: <span class="item-subtotal">0</span></p>
+                </div>
+                <!-- Gallery Item 2 - Bottle of Water -->
+                <div class="gallery-item" data-quantity="0" data-active="false" data-price="20" data-id="bottle-of-water">
+                    <img src="bottle of water.jpg" class="gallery-image">
+                    <p>Bottle of Water 20 pesos</p>
+                    <div class="quantity-display">0</div>
+                    <button class="increase">+</button>
+                    <button class="decrease">-</button>
+                    <p class="subtotal">subTotal: <span class="item-subtotal">0</span></p>
+                </div>
+                <!-- Gallery Item 3 - 2pc Fried Chicken with Rice -->
+                <div class="gallery-item" data-quantity="0" data-active="false" data-price="50" data-id="2pc-chicken-with-rice">
+                    <img src="2-pcFriedChickenWithRice_solo.png" class="gallery-image">
+                    <p>2pc-Fried-Chicken 50 pesos</p>
+                    <div class="quantity-display">0</div>
+                    <button class="increase">+</button>
+                    <button class="decrease">-</button>
+                    <p class="subtotal">subTotal: <span class="item-subtotal">0</span></p>
+                </div>
+                <!-- Gallery Item 4 - Takoyaki -->
+                <div class="gallery-item" data-quantity="0" data-active="false" data-price="20" data-id="takoyaki">
+                    <img src="takoyaki.jpg" class="gallery-image">
+                    <p>Takoyaki 20 pesos</p>
+                    <div class="quantity-display">0</div>
+                    <button class="increase">+</button>
+                    <button class="decrease">-</button>
+                    <p class="subtotal">subTotal: <span class="item-subtotal">0</span></p>
+                </div>
+                <!-- Gallery Item 5 - Pares with Rice -->
+                <div class="gallery-item" data-quantity="0" data-active="false" data-price="50" data-id="beef-pares-with-rice">
+                    <img src="pares with rice.jpg" class="gallery-image">
+                    <p>Pares with Rice 50 pesos</p>
+                    <div class="quantity-display">0</div>
+                    <button class="increase">+</button>
+                    <button class="decrease">-</button>
+                    <p class="subtotal">subTotal: <span class="item-subtotal">0</span></p>
+                </div>
+                <!-- Gallery Item 6 - Lumpia -->
+                <div class="gallery-item" data-quantity="0" data-active="false" data-price="5" data-id="lumpia">
+                    <img src="lumpia.jpg" class="gallery-image">
+                    <p>Lumpia 5 pesos</p>
+                    <div class="quantity-display">0</div>
+                    <button class="increase">+</button>
+                    <button class="decrease">-</button>
+                    <p class="subtotal">subTotal: <span class="item-subtotal">0</span></p>
+                </div>
+            </div>
+            <!--class for payment info-->
+            <div class="payment-info">
+                <label for="payment"></label>
+                <input type="number" id="payment" name="payment" placeholder="Enter amount">
+            </div>
+            <div class="action-buttons">
+                <button class="btn add" id="order-btn">Order</button>
+                <button class="btn cancel" id="cancel-btn">Cancel</button>
+            </div>
+            <div class="total-price">
+                <span>Total Price:<span class="total-price-display">0</span>
+            </div> 
+        </section>
+    </div>
+</main>
 </body>
 </html>
